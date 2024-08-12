@@ -37,3 +37,35 @@ private:
             return 0;
         }
     }
+int main()
+{
+    Date dt(25, 8, 2024);
+    Date dt2(1, 1, 2025);
+
+    cout << "Date 1: ";
+    dt.display();
+    cout << "Date 2: ";
+    dt2.display();
+
+    // Relational operator testing
+    cout << "dt < dt2: " << (dt < dt2) << endl;
+    cout << "dt > dt2: " << (dt > dt2) << endl;
+    cout << "dt == dt2: " << (dt == dt2) << endl;
+
+    // Increment the date by one day
+    ++dt;
+    cout << "Date after increment: ";
+    dt.display();
+
+    // Add 10 days to the date
+    Date dt3 = dt + 10;
+    cout << "Date after adding 10 days: ";
+    dt3.display();
+
+    // Convert date to int to get the days elapsed in the year
+    int days = dt;
+    cout << "Days elapsed in the year: " << days << endl;
+
+    return 0;
+}
+//main function
