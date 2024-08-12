@@ -25,6 +25,16 @@ int main() {
     string line;
 
     // Reading the file and parsing book details
+    
+    inFile.close();
+
+    // Sort the books by author name
+    sort(books.begin(), books.end(), compareByAuthor);
+
+    // Output the sorted book details
+    ofstream outFile("sorted_books.txt");
+    for (const auto& book : books) {
+
 
 
     
