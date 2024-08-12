@@ -20,4 +20,9 @@ int main()
 {
     int x, y, z;
 
+cout << "Please enter the three variables: " << endl;
+    cin >> x >> y >> z;
 
+    cout << "The largest number among the three is: " << LargestNumber(x, y, z);
+    return 0;
+}
