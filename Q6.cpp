@@ -37,6 +37,45 @@ private:
             return 0;
         }
     }
+// Overload + operator to add a given number of days
+    Date operator+(int days) const
+    {
+        Date newDate = *this;
+        while (days > 0)
+        {
+            newDate.day++;
+            if (newDate.day > newDate.daysInMonth(newDate.month, newDate.year))
+            {
+                newDate.day = 1;
+                newDate.month++;
+                if (newDate.month > 12)
+                {
+                    newDate.month = 1;
+                    newDate.year++;
+                }
+            }
+            days--;
+        }
+        return newDate;
+    }
+
+    // Conversion to int to get the number of days elapsed in the current year
+    operator int() const
+    {
+        int daysElapsed = day;
+        for (int i = 1; i < month; ++i)
+        {
+            daysElapsed += daysInMonth(i, year);
+        }
+        return daysElapsed;
+    }
+
+    // Display function
+    void display() const
+    {
+        cout << day << "/" << month << "/" << year << endl;
+    }
+};
 int main()
 {
     Date dt(25, 8, 2024);
