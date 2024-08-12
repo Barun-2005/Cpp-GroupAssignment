@@ -54,3 +54,13 @@ T Vector<T>::Smallestnum()
 
     return a;
 }      
+template <class T>
+float Vector<T>::Average()
+{
+    float sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        sum += arr[i];
+    }
+    return sum / n;
+};
