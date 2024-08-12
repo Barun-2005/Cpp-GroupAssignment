@@ -9,4 +9,9 @@ int LargestNumber(int a, int b, int c)
     {
         max = b;
     }
+else if (max < c)
+    {
+        max = c;
+    }
+
 
