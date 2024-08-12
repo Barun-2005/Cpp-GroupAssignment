@@ -25,6 +25,22 @@ int main() {
     string line;
 
     // Reading the file and parsing book details
+
+    while (getline(inFile, line)) {
+        stringstream ss(line);
+        Book book;
+
+        getline(ss, book.book_id, ',');
+        getline(ss, book.author_name, ',');
+        ss >> book.price;
+        ss.ignore(1); // Ignore the comma
+        ss >> book.no_of_pages;
+        ss.ignore(1); // Ignore the comma
+        getline(ss, book.publisher, ',');
+        ss >> book.year_of_publishing;
+
+        books.push_back(book);
+    }
     
     inFile.close();
 
