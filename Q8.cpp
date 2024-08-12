@@ -64,3 +64,20 @@ float Vector<T>::Average()
     }
     return sum / n;
 };
+//Main function
+int main()
+{
+    Vector<float> List;
+    List.setValue();
+    cout << "Smallest number: " << List.Smallestnum() << endl;
+
+    int num;
+    cout << "Enter the element to search: ";
+    cin >> num;
+
+    List.SearchElement(num);
+
+    cout << "Average: " << List.Average() << endl;
+    return 0;
+}
+person5
