@@ -13,5 +13,11 @@ else if (max < c)
     {
         max = c;
     }
+return max;
+}
+
+int main()
+{
+    int x, y, z;
 
 
