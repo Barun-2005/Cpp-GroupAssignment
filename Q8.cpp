@@ -21,3 +21,36 @@ public:
             cin >> arr[i];
         }
     }
+T Smallestnum();
+    bool SearchElement(T);
+    float Average();
+
+    ~Vector()
+    {
+        delete[] arr;
+    }
+};
+
+template <class T>
+T Vector<T>::Smallestnum()
+{
+    T a;
+    a = arr[0];
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (n == 0 || n == 1)
+        {
+            return n;
+        }
+
+        else
+        {
+            if (a > arr[i + 1])
+            {
+                a = arr[i + 1];
+            }
+        }
+    }
+
+    return a;
+}      
