@@ -53,7 +53,23 @@ T Vector<T>::Smallestnum()
     }
 
     return a;
-}      
+} 
+
+template <class T>
+bool Vector<T>::SearchElement(T ele)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == ele)
+        {
+            cout << "The element is found at " << i << "'th position" << endl;
+            return true;
+        }
+    }
+    cout << "Element Not found" << endl;
+    return false;
+};
+
 template <class T>
 float Vector<T>::Average()
 {
