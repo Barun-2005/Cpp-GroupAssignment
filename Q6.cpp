@@ -37,6 +37,44 @@ private:
             return 0;
         }
     }
+public:
+    // Constructor
+    Date(int d = 1, int m = 1, int y = 2000) : day(d), month(m), year(y) {}
+
+    // Overload relational operators
+    bool operator<(const Date &other) const
+    {
+        if (year != other.year)
+            return year < other.year;
+        if (month != other.month)
+            return month < other.month;
+        return day < other.day;
+    }
+
+    bool operator<=(const Date &other) const
+    {
+        return (*this < other) || (*this == other);
+    }
+
+    bool operator>(const Date &other) const
+    {
+        return !(*this <= other);
+    }
+
+    bool operator>=(const Date &other) const
+    {
+        return !(*this < other);
+    }
+
+    bool operator==(const Date &other) const
+    {
+        return day == other.day && month == other.month && year == other.year;
+    }
+
+    bool operator!=(const Date &other) const
+    {
+        return !(*this == other);
+    }
 
 // Overload ++ operator to increment the date by one day
     Date &operator++()
