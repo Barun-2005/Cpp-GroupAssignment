@@ -26,3 +26,18 @@ int main() {
 
     // Reading the file and parsing book details
 
+
+    
+outFile << book.book_id << ","
+                << book.author_name << ","
+                << book.price << ","
+                << book.no_of_pages << ","
+                << book.publisher << ","
+                << book.year_of_publishing << endl;
+    }
+    outFile.close();
+
+    cout << "Books sorted by author name and saved to sorted_books.txt." << endl;
+
+    return 0;
+}
