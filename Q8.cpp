@@ -1,3 +1,8 @@
+/*Design a class template by name Vector and perform the following: 
+• Find the smallest of the element in the Vector. 
+• Search for an element in the Vector. 
+• Find the average of the element in the array.*/
+
 #include <iostream>
 
 using namespace std;
@@ -21,7 +26,7 @@ public:
             cin >> arr[i];
         }
     }
-T Smallestnum();
+    T Smallestnum();
     bool SearchElement(T);
     float Average();
 
@@ -96,4 +101,4 @@ int main()
     cout << "Average: " << List.Average() << endl;
     return 0;
 }
-person5
+
