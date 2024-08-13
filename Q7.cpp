@@ -1,3 +1,7 @@
+/*Develop a program to sort a file consisting of books’ details in the alphabetical order of author 
+names.
+The details of books include book_id, author_name, price, no_of_pages, publisher, 
+year_of_publishing.*/ 
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -49,12 +53,8 @@ int main() {
 
     // Output the sorted book details
     ofstream outFile("sorted_books.txt");
-    for (const auto& book : books) {
-
-
-
-    
-outFile << book.book_id << ","
+    for (const auto& book : books) {    
+        outFile << book.book_id << ","
                 << book.author_name << ","
                 << book.price << ","
                 << book.no_of_pages << ","
