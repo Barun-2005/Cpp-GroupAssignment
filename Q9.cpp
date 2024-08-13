@@ -1,3 +1,4 @@
+/* Design a generic function for finding the largest of three numbers.*/
 #include <iostream>
 
 using namespace std;
