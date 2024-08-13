@@ -5,7 +5,7 @@
 • Provide the necessary function to use the statement like days=dt; where days is an int 
 variable and dt is an object of date class. The statement is intended to assign the number of days 
 elapsed in the current year of the date to the variable days. Note that this is a case of conversion 
-from derived type to basic type.*\
+from derived type to basic type.*/
 #include <iostream>
 
 using namespace std;
